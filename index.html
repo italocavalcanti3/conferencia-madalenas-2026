@@ -868,24 +868,22 @@ footer .legal {
   left: 0; right: 0; bottom: 0;
   z-index: 60;
   display: none;
-  padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-  background: linear-gradient(to top, rgba(20,8,10,.96) 70%, rgba(20,8,10,0));
+  padding: 0;
   transform: translateY(100%);
   transition: transform var(--dur-base) var(--ease-sacred);
 }
 .sticky-cta.show { transform: translateY(0); }
 @media (max-width: 720px) {
   .sticky-cta { display: block; }
-  body.has-sticky-cta { padding-bottom: 84px; }
+  body.has-sticky-cta { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 }
 .sticky-cta .row {
   display: flex;
   align-items: center;
   gap: 12px;
   background: var(--vinho);
-  padding: 10px 12px 10px 16px;
-  border-radius: 2px;
-  border: 1px solid rgba(235,223,172,.35);
+  padding: 12px 12px calc(12px + env(safe-area-inset-bottom, 0px)) 16px;
+  border-top: 1px solid rgba(235,223,172,.35);
 }
 .sticky-cta .price-block {
   display: flex; flex-direction: column; gap: 2px;
@@ -1144,7 +1142,6 @@ footer .legal {
     <div class="col">
       <h4>Onde encontrar</h4>
       <a href="https://www.instagram.com/somos.madalenas/" target="_blank" rel="noopener">@somos.madalenas</a>
-      <a href="mailto:contato@somosmadalenas.com">contato@somosmadalenas.com</a>
       <a href="#inscricao">Inscreva-se</a>
     </div>
   </div>
@@ -1163,7 +1160,7 @@ footer .legal {
       <span class="price-eb">Primeiro lote</span>
       <span class="price-val">R$ 150<span class="lot-label">aberto</span></span>
     </div>
-    <a href="#inscricao" class="btn-mini">Inscrever-me <span aria-hidden="true">→</span></a>
+    <a href="#inscricao" class="btn-mini">Garantir ingresso <span aria-hidden="true">→</span></a>
   </div>
 </div>
 
