@@ -1,1233 +1,1970 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Conferência Madalenas 2026</title>
-<meta name="description" content="3ª edição da Conferência Madalenas — Restauradas, enraizadas e inabaláveis. 07 de novembro de 2026 · Teatro Tokio Marine Hall · São Paulo" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" />
-<style>
-/* =========================================================
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conferência Madalenas 2026</title>
+  <meta name="description"
+    content="3ª edição da Conferência Madalenas — Restauradas, enraizadas e inabaláveis. 07 de novembro de 2026 · Teatro Tokio Marine Hall · São Paulo" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" />
+  <style>
+    /* =========================================================
    MADALENAS 2026 — Tokens & Base
    ========================================================= */
 
-@font-face {
-  font-family: "Literaturnaya";
-  src: url("fonts/Literaturnaya-Book.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Literaturnaya";
-  src: local("Cormorant Garamond"), local("CormorantGaramond-Regular"),
-       url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjornFLsS6V7w.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+00A0-00FF, U+0100-017F;
-}
-@font-face {
-  font-family: "Switzer";
-  src: url("fonts/Switzer-Semibold.otf") format("opentype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Edwardian Script ITC";
-  src: url("fonts/EdwardianScriptITC.ttf") format("truetype");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
+    @font-face {
+      font-family: "Literaturnaya";
+      src: url("fonts/Literaturnaya-Book.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
 
-/* ---------- TOKENS ---------- */
-:root {
-  --espresso:      #241406;
-  --mocha:         #37200C;
-  --vinho:         #340505;
-  --champagne:     #EBDFAC;
-  --areia:         #D6CFC0;
-  --offwhite:      #EBE9E3;
-  --black-ink:     #14080A;
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: local("Cormorant Garamond"), local("CormorantGaramond-Regular"),
+        url("https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjornFLsS6V7w.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+      unicode-range: U+00A0-00FF, U+0100-017F;
+    }
 
-  --bg-page:       var(--offwhite);
-  --bg-calm:       var(--areia);
-  --bg-dramatic:   var(--vinho);
-  --bg-deep:       var(--espresso);
+    @font-face {
+      font-family: "Switzer";
+      src: url("fonts/Switzer-Semibold.otf") format("opentype");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
 
-  --fg-primary:    var(--espresso);
-  --fg-secondary:  rgba(36, 20, 6, 0.72);
-  --fg-muted:      rgba(36, 20, 6, 0.55);
-  --fg-on-dark:    var(--offwhite);
-  --fg-script:     var(--champagne);
-  --fg-rule:       rgba(36, 20, 6, 0.18);
-  --fg-rule-dark:  rgba(235, 233, 227, 0.18);
+    @font-face {
+      font-family: "Edwardian Script ITC";
+      src: url("fonts/EdwardianScriptITC.ttf") format("truetype");
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
 
-  --font-display:  "Literaturnaya", "Cormorant Garamond", "EB Garamond", Georgia, serif;
-  --font-script:   "Edwardian Script ITC", "Pinyon Script", "Allura", cursive;
-  --font-body:     "Switzer", "Inter", "Helvetica Neue", Arial, sans-serif;
+    @font-face {
+      font-family: "Mollies";
+      src: url("fonts/MOLLIES-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
 
-  --ease-sacred:  cubic-bezier(0.22, 0.61, 0.36, 1);
-  --dur-fast:     180ms;
-  --dur-base:     320ms;
-  --dur-slow:     560ms;
-}
+    @font-face {
+      font-family: "Arenta";
+      src: url("fonts/Arenta.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
 
-/* ---------- BASE ---------- */
-html, body {
-  background: var(--bg-page);
-  color: var(--fg-primary);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.55;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
+    /* ---------- TOKENS ---------- */
+    :root {
+      --espresso: #241406;
+      --mocha: #37200C;
+      --vinho: #340505;
+      --champagne: #EBDFAC;
+      --areia: #D6CFC0;
+      --offwhite: #EBE9E3;
+      --black-ink: #14080A;
 
-/* ---------- LINKS ---------- */
-a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  transition: opacity var(--dur-fast) var(--ease-sacred);
-}
-a:hover { opacity: 0.65; }
+      --bg-page: var(--offwhite);
+      --bg-calm: var(--areia);
+      --bg-dramatic: var(--vinho);
+      --bg-deep: var(--espresso);
 
-::selection { background: var(--champagne); color: var(--vinho); }
+      --fg-primary: var(--espresso);
+      --fg-secondary: rgba(36, 20, 6, 0.72);
+      --fg-muted: rgba(36, 20, 6, 0.55);
+      --fg-on-dark: var(--offwhite);
+      --fg-script: var(--champagne);
+      --fg-rule: rgba(36, 20, 6, 0.18);
+      --fg-rule-dark: rgba(235, 233, 227, 0.18);
 
-/* ---------- RESET ---------- */
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; overflow-x: hidden; -webkit-tap-highlight-color: transparent; }
-img { max-width: 100%; display: block; }
-section, footer, .marquee { max-width: 100vw; overflow-x: clip; }
+      --font-display: "Cormorant Garamond", "Literaturnaya", "EB Garamond", Georgia, serif;
+      --font-script: "Edwardian Script ITC", "Pinyon Script", "Allura", cursive;
+      --font-body: "Cormorant Garamond", Georgia, serif;
 
-/* ---------- LAYOUT ---------- */
-.wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
-@media (min-width: 720px) { .wrap { padding: 0 48px; } }
-section { position: relative; }
+      --ease-sacred: cubic-bezier(0.22, 0.61, 0.36, 1);
+      --dur-fast: 180ms;
+      --dur-base: 320ms;
+      --dur-slow: 560ms;
+    }
 
-/* ---------- TOP BAR ---------- */
-.topbar {
-  position: fixed; inset: 0 0 auto 0;
-  z-index: 50;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-  gap: 12px;
-  background: linear-gradient(to bottom, rgba(20,8,10,.55), rgba(20,8,10,0));
-  color: var(--offwhite);
-  font-family: var(--font-body);
-  font-size: 11px;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  pointer-events: none;
-}
-@media (min-width: 720px) { .topbar { padding: 18px 32px; } }
-.topbar a { pointer-events: auto; border-bottom: 0; }
-.topbar .mark {
-  font-family: var(--font-display);
-  font-size: 16px;
-  letter-spacing: -.01em;
-  text-transform: uppercase;
-}
-.topbar .right { display: flex; gap: 16px; align-items: center; }
-@media (min-width: 720px) { .topbar .right { gap: 28px; } }
-.topbar .right .cta {
-  color: var(--champagne);
-  border-bottom: 1px solid var(--champagne);
-  padding-bottom: 2px;
-}
-@media (max-width: 720px) {
-  .topbar { font-size: 10px; letter-spacing: .18em; }
-  .topbar .mark { font-size: 14px; }
-  .topbar .right .hide-sm { display: none; }
-}
+    /* ---------- BASE ---------- */
+    html,
+    body {
+      background: var(--bg-page);
+      color: var(--fg-primary);
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
 
-/* ---------- HERO ---------- */
-.hero {
-  min-height: 100vh;
-  min-height: 100svh;
-  background: var(--bg-deep);
-  color: var(--fg-on-dark);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 88px 20px 28px;
-  overflow: hidden;
-  position: relative;
-  gap: 24px;
-}
-@media (min-width: 720px) {
-  .hero { padding: 112px 48px 48px; gap: 0; }
-}
-.hero .photo {
-  position: absolute; inset: 0;
-  background-image: url("assets/hero-bg.jpg");
-  background-size: cover;
-  background-position: center 30%;
-  filter: sepia(.6) saturate(.55) brightness(.42) contrast(1.15) hue-rotate(-12deg);
-  opacity: .65;
-}
-.hero .vignette {
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse at 70% 25%, rgba(235,223,172,.16), transparent 55%),
-    radial-gradient(ellipse at 50% 110%, rgba(52,5,5,.95), rgba(36,20,6,.55) 45%, transparent 75%),
-    linear-gradient(to bottom, rgba(36,20,6,.55), rgba(20,8,10,.85));
-}
-.hero .grain {
-  position: absolute; inset: 0;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.85 0 0 0 0 0.7 0 0 0 0.16 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  opacity: .35; mix-blend-mode: overlay;
-}
-.hero > * { position: relative; z-index: 2; }
+    /* Elementos de fonte cursiva/script mantêm peso normal */
+    .hero-mark .conf,
+    .hero-tagline .tagline-text .word-rest,
+    .hero-tagline .tagline-text .word-enr,
+    .hero-tagline .tagline-text .word-inab,
+    .invited h2 em,
+    .larissa h2 em,
+    .when .big em,
+    .lots h2 em,
+    .final h2 em,
+    footer .tag,
+    .audience-cap {
+      font-weight: 400;
+    }
 
-.hero-eyebrow {
-  display: flex; justify-content: space-between; align-items: center;
-  font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
-  opacity: .8;
-  gap: 12px;
-}
-@media (min-width: 720px) {
-  .hero-eyebrow { font-size: 11px; letter-spacing: .22em; }
-}
-.hero-eyebrow span { font-family: var(--font-body); }
-.hero-eyebrow .dot {
-  display: inline-block; width: 6px; height: 6px;
-  background: var(--champagne); margin-right: 10px; vertical-align: middle;
-  border-radius: 50%;
-}
+    /* Arenta (título Madalenas) mantém peso próprio */
+    .hero-mark .word {
+      font-weight: 400;
+    }
 
-.hero-mark {
-  display: flex; flex-direction: column;
-  align-self: center;
-  text-align: center;
-  margin: auto 0;
-}
-.hero-mark .conf {
-  font-family: var(--font-script);
-  font-style: italic;
-  color: var(--champagne);
-  font-size: clamp(48px, 13vw, 120px);
-  line-height: .85;
-  margin-bottom: -.2em;
-  margin-left: 4%;
-  align-self: flex-start;
-}
-.hero-mark .word {
-  font-family: var(--font-display);
-  font-size: clamp(56px, 19vw, 240px);
-  line-height: .88;
-  letter-spacing: -.035em;
-  text-transform: uppercase;
-  font-weight: 400;
-  word-break: break-word;
-}
-.hero-mark .edition {
-  font-family: var(--font-body);
-  font-size: 10px;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  opacity: .72;
-  margin-top: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px 14px;
-}
-@media (min-width: 720px) {
-  .hero-mark .edition { font-size: 12px; letter-spacing: .28em; gap: 0; display: block; }
-  .hero-mark .edition .sep { opacity: .4; margin: 0 14px; display: inline; }
-}
-.hero-mark .edition .sep { opacity: .4; }
-@media (max-width: 719px) {
-  .hero-mark .edition .sep { display: none; }
-}
+    /* ---------- LINKS ---------- */
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      transition: opacity var(--dur-fast) var(--ease-sacred);
+    }
 
-.hero-tagline {
-  text-align: center;
-  margin: 8px auto 0;
-  max-width: 640px;
-}
-.hero-tagline .tagline-text {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(22px, 5.4vw, 38px);
-  line-height: 1.25;
-  letter-spacing: .005em;
-  color: var(--offwhite);
-  margin: 0 0 26px;
-}
-.hero-tagline .tagline-text .word-rest {
-  font-family: var(--font-script);
-  font-style: italic;
-  color: var(--champagne);
-  font-size: 1.85em;
-  line-height: .7;
-  vertical-align: -.12em;
-  letter-spacing: .01em;
-}
-.hero-tagline .tagline-text .word-enr {
-  font-family: var(--font-script);
-  font-style: italic;
-  color: var(--champagne);
-  font-size: 1.85em;
-  line-height: .7;
-  vertical-align: -.12em;
-  letter-spacing: .01em;
-}
-.hero-tagline .tagline-text .word-inab {
-  font-family: var(--font-script);
-  font-style: italic;
-  color: var(--champagne);
-  font-size: 1.85em;
-  line-height: .7;
-  vertical-align: -.12em;
-  letter-spacing: .01em;
-}
+    a:hover {
+      opacity: 0.65;
+    }
 
-.hero-foot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  text-align: center;
-  justify-content: center;
-}
-@media (min-width: 720px) { .hero-foot { gap: 32px; } }
-.hero-foot .cta-block {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 14px;
-  align-items: center;
-  justify-content: center;
-}
+    ::selection {
+      background: var(--champagne);
+      color: var(--vinho);
+    }
 
-.hero-lot-flag {
-  font-family: var(--font-body);
-  font-size: 10px;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--champagne);
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(235,223,172,.45);
-  padding: 8px 12px;
-}
-.hero-lot-flag .pulse {
-  width: 6px; height: 6px; background: var(--champagne); border-radius: 50%;
-  animation: pulse 2.4s var(--ease-sacred) infinite;
-}
-@keyframes pulse {
-  0%, 100% { opacity: .4; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.4); }
-}
+    /* ---------- RESET ---------- */
+    * {
+      box-sizing: border-box;
+    }
 
-/* ---------- BUTTONS ---------- */
-.btn {
-  font-family: var(--font-body);
-  font-size: 13px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 16px 24px;
-  min-height: 48px;
-  border-radius: 2px;
-  border: 1px solid transparent;
-  cursor: pointer;
-  transition: background var(--dur-base) var(--ease-sacred),
-              color var(--dur-base) var(--ease-sacred),
-              opacity var(--dur-base) var(--ease-sacred);
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  line-height: 1.2;
-}
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
 
-.btn:hover { opacity: 1; }
-@media (min-width: 720px) { .btn { padding: 18px 32px; } }
-.btn .arrow { font-family: var(--font-body); font-weight: 400; opacity: .8; transition: transform var(--dur-base) var(--ease-sacred); }
-.btn:hover .arrow { transform: translateX(4px); }
-.btn-primary { background: var(--vinho); color: var(--champagne); border-color: var(--vinho); }
-.btn-primary:hover { background: var(--mocha); border-color: var(--mocha); }
-.btn-champagne { background: var(--champagne); color: var(--vinho); border-color: var(--champagne); }
-.btn-champagne:hover { background: #f5edbe; border-color: #f5edbe; }
-.btn-onlight { background: var(--espresso); color: var(--offwhite); border-color: var(--espresso); }
-.btn-onlight:hover { background: var(--vinho); border-color: var(--vinho); }
-.btn-ghost-dark {
-  background: transparent; color: var(--champagne);
-  border-color: rgba(235,223,172,.45);
-}
-.btn-ghost-dark:hover { background: rgba(235,223,172,.08); }
-.btn-large { padding: 20px 28px; font-size: 14px; min-height: 56px; }
-@media (min-width: 720px) { .btn-large { padding: 22px 38px; } }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-/* ---------- MARQUEE ---------- */
-.marquee {
-  overflow: hidden;
-  border-top: 1px solid var(--fg-rule);
-  border-bottom: 1px solid var(--fg-rule);
-  padding: 16px 0;
-  background: var(--offwhite);
-}
-.marquee.dark {
-  background: var(--bg-deep);
-  border-color: var(--fg-rule-dark);
-}
-.marquee-track {
-  display: flex; gap: 56px;
-  white-space: nowrap;
-  width: max-content;
-  animation: marquee 60s linear infinite;
-}
-.marquee-track span {
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: rgba(36,20,6,.62);
-}
-.marquee.dark .marquee-track span { color: rgba(235,233,227,.55); }
-.marquee-track .sep { color: var(--vinho); }
-.marquee.dark .marquee-track .sep { color: var(--champagne); }
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-/* ---------- MANIFESTO ---------- */
-.invited {
-  background: var(--vinho);
-  color: var(--fg-on-dark);
-  padding: 80px 24px;
-  text-align: center;
-}
-@media (min-width: 720px) { .invited { padding: 160px 48px; } }
-.invited .eyebrow-mark {
-  font-family: var(--font-body); font-size: 11px;
-  letter-spacing: .22em; text-transform: uppercase;
-  color: rgba(235,233,227,.55);
-}
-.invited h2 {
-  font-family: "Cormorant Garamond", var(--font-display);
-  font-size: clamp(34px, 8.5vw, 76px);
-  line-height: 1.06;
-  letter-spacing: -.02em;
-  margin: 28px auto 0;
-  max-width: 880px;
-  font-weight: 700;
-}
-.invited h2 em {
-  font-family: var(--font-script);
-  font-style: italic;
-  color: var(--champagne);
-  font-weight: 400;
-  font-size: clamp(56px, 14vw, 108px);
-  line-height: 1;
-  display: block;
-  margin-top: -.1em;
-}
-.invited p {
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.7;
-  font-weight: 600;
-  margin: 36px auto 0;
-  max-width: 560px;
-  opacity: .82;
-}
-@media (min-width: 720px) { .invited p { font-size: 17px; margin-top: 48px; } }
-.invited p + p { margin-top: 18px; }
+    section,
+    footer,
+    .marquee {
+      max-width: 100vw;
+      overflow-x: clip;
+    }
 
-/* ---------- LARISSA ---------- */
-.larissa {
-  background: var(--offwhite);
-  padding: 80px 24px;
-}
-@media (min-width: 720px) { .larissa { padding: 160px 48px; } }
-.larissa-grid {
-  max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr;
-  gap: 40px; align-items: start;
-}
-@media (min-width: 880px) {
-  .larissa-grid { grid-template-columns: .9fr 1.1fr; gap: 80px; }
-}
-.larissa-portrait {
-  background: var(--areia) url("assets/larissa.jpg") center/cover no-repeat;
-  aspect-ratio: 4/5;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--fg-rule);
-  max-width: 360px;
-  width: 100%;
-  margin: 0 auto;
-  filter: sepia(.18) saturate(.9) contrast(1.04);
-}
-@media (min-width: 880px) { .larissa-portrait { max-width: none; } }
-.larissa-portrait::after {
-  content: "Larissa Garbiati"; position: absolute; inset: auto 0 16px 16px;
-  font-family: var(--font-body); font-size: 10px; letter-spacing: .22em;
-  text-transform: uppercase; color: rgba(235,233,227,.85);
-  text-shadow: 0 1px 2px rgba(0,0,0,.45);
-}
-.larissa-meta {
-  font-family: var(--font-body); font-size: 11px;
-  letter-spacing: .22em; text-transform: uppercase;
-  color: var(--fg-muted);
-}
-.larissa h2 {
-  font-family: var(--font-display);
-  font-size: clamp(36px, 9vw, 68px);
-  line-height: 1.04;
-  letter-spacing: -.02em;
-  margin: 24px 0 28px;
-  font-weight: 400;
-}
-.larissa h2 em {
-  font-family: var(--font-script); font-style: italic;
-  color: var(--vinho); font-size: 1.4em; line-height: .8;
-  vertical-align: -.05em;
-}
-.larissa-bio {
-  border-top: 1px solid var(--fg-rule);
-  padding-top: 24px;
-  display: grid; gap: 12px;
-}
-.larissa-bio dt {
-  font-family: var(--font-body); font-size: 10px;
-  letter-spacing: .22em; text-transform: uppercase;
-  color: var(--fg-muted);
-}
-.larissa-bio dd {
-  margin: 0 0 12px;
-  font-family: var(--font-body); font-size: 16px; font-weight: 600;
-  color: var(--fg-primary);
-  line-height: 1.45;
-}
-.larissa-bio dd a { border-bottom: 1px solid currentColor; }
-.larissa-bio dd em {
-  font-style: italic;
-  font-family: var(--font-display);
-  font-weight: 400;
-}
+    /* ---------- LAYOUT ---------- */
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
 
-/* ---------- QUANDO / ONDE ---------- */
-.when {
-  background: var(--espresso);
-  color: var(--fg-on-dark);
-  padding: 80px 24px;
-}
-@media (min-width: 720px) { .when { padding: 160px 48px; } }
-.when-inner {
-  max-width: 1100px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr;
-  gap: 48px;
-}
-@media (min-width: 880px) {
-  .when-inner { grid-template-columns: 1fr 1fr; gap: 80px; }
-}
-.when .col-head {
-  font-family: var(--font-body); font-size: 11px;
-  letter-spacing: .22em; text-transform: uppercase;
-  color: rgba(235,233,227,.55);
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(235,233,227,.18);
-  margin-bottom: 28px;
-}
-.when .big {
-  font-family: var(--font-display);
-  font-size: clamp(32px, 8vw, 56px);
-  line-height: 1.06;
-  letter-spacing: -.02em;
-  font-weight: 400;
-}
-.when .big em {
-  font-family: var(--font-script); font-style: italic;
-  color: var(--champagne); font-size: 1.35em;
-  line-height: .8; vertical-align: -.05em;
-}
-.when .sub {
-  font-family: var(--font-body); font-size: 15px;
-  font-weight: 600; line-height: 1.6;
-  margin-top: 24px; opacity: .78;
-  max-width: 420px;
-}
-.when .sub a { border-bottom: 1px solid rgba(235,223,172,.55); color: var(--champagne); }
+    @media (min-width: 720px) {
+      .wrap {
+        padding: 0 48px;
+      }
+    }
 
-/* ---------- LOTES / PREÇOS ---------- */
-.lots {
-  background: var(--offwhite);
-  padding: 80px 20px 120px;
-}
-@media (min-width: 720px) { .lots { padding: 160px 48px; } }
-.lots-inner { max-width: 1000px; margin: 0 auto; }
-.lots .head { text-align: center; margin-bottom: 40px; }
-@media (min-width: 720px) { .lots .head { margin-bottom: 64px; } }
-.lots .head .eb {
-  font-family: var(--font-body); font-size: 11px;
-  letter-spacing: .22em; text-transform: uppercase;
-  color: var(--fg-muted);
-}
-.lots h2 {
-  font-family: "Cormorant Garamond", var(--font-display);
-  font-size: clamp(32px, 8vw, 60px);
-  line-height: 1.06;
-  letter-spacing: -.02em;
-  margin: 20px 0 0;
-  font-weight: 700;
-}
-.lots h2 em {
-  font-family: var(--font-script); font-style: italic;
-  color: var(--vinho); font-size: 1.35em; line-height: .8;
-  vertical-align: -.05em;
-}
-.lot-list { border-top: 1px solid var(--fg-rule); }
-.lot {
-  display: grid;
-  grid-template-columns: 56px 1fr 140px 120px;
-  gap: 16px;
-  padding: 28px 0;
-  border-bottom: 1px solid var(--fg-rule);
-  align-items: baseline;
-  transition: background var(--dur-base) var(--ease-sacred);
-}
-.lot.open { background: linear-gradient(to right, rgba(52,5,5,.04), transparent 40%); }
-.lot .num {
-  font-family: var(--font-display);
-  font-size: 28px;
-  letter-spacing: -.01em;
-  line-height: 1;
-}
-.lot .name {
-  font-family: var(--font-body);
-  font-size: 16px; font-weight: 600;
-  color: var(--fg-primary);
-}
-.lot .name small {
-  display: block; font-size: 11px; letter-spacing: .18em;
-  text-transform: uppercase; opacity: .55; margin-top: 6px; font-weight: 600;
-}
-.lot .price {
-  font-family: var(--font-body);
-  font-size: 22px; font-weight: 600;
-  text-align: right;
-}
-.lot .price small {
-  display: block; font-size: 10px; letter-spacing: .14em;
-  text-transform: uppercase; opacity: .55; margin-top: 4px; font-weight: 600;
-}
-.lot .status {
-  font-family: var(--font-body);
-  font-size: 11px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  text-align: right;
-  color: var(--fg-muted);
-}
-.lot.open .status { color: var(--vinho); }
-.lot.open .num, .lot.open .price { color: var(--vinho); }
-.lot.next { opacity: .55; }
-@media (max-width: 720px) {
-  .lot {
-    grid-template-columns: 44px 1fr auto;
-    grid-template-areas:
-      "num name status"
-      "num price price";
-    row-gap: 10px;
-    column-gap: 12px;
-    padding: 22px 0;
-  }
-  .lot .num { grid-area: num; font-size: 22px; align-self: start; padding-top: 4px; }
-  .lot .name { grid-area: name; font-size: 15px; }
-  .lot .name small { font-size: 10px; letter-spacing: .14em; margin-top: 4px; }
-  .lot .price { grid-area: price; text-align: left; font-size: 24px; }
-  .lot .price small { display: inline; margin-left: 8px; font-size: 10px; }
-  .lot .status { grid-area: status; text-align: right; font-size: 10px; letter-spacing: .14em; padding-top: 4px; }
-}
-.lots-cta {
-  margin-top: 40px;
-  display: flex; flex-direction: column;
-  align-items: stretch; gap: 18px;
-  text-align: center;
-}
-@media (min-width: 720px) { .lots-cta { margin-top: 56px; align-items: center; } }
-.lots-cta .btn { justify-content: center; }
-.lots-cta .scarcity {
-  font-family: var(--font-body); font-size: 11px;
-  letter-spacing: .22em; text-transform: uppercase;
-  color: var(--vinho);
-}
-.lots-cta .secure {
-  font-family: var(--font-body); font-size: 11px;
-  color: var(--fg-muted); font-weight: 600;
-  line-height: 1.55;
-}
-@media (min-width: 720px) { .lots-cta .scarcity, .lots-cta .secure { font-size: 12px; } }
+    section {
+      position: relative;
+    }
 
-/* ---------- FOTO DO PÚBLICO ---------- */
-.audience {
-  background: var(--espresso);
-  overflow: hidden;
-}
-.audience img {
-  width: 100%;
-  height: clamp(280px, 50vh, 560px);
-  object-fit: cover;
-  object-position: center 40%;
-  filter: sepia(.35) saturate(.7) brightness(.85) contrast(1.05);
-}
-.audience-cap {
-  background: var(--espresso); color: var(--fg-on-dark);
-  text-align: center;
-  padding: 32px 32px 56px;
-  font-family: var(--font-script); font-style: italic;
-  color: var(--champagne);
-  font-size: clamp(36px, 5vw, 56px);
-  line-height: .9;
-}
+    /* ---------- TOP BAR ---------- */
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      gap: 12px;
+      background: linear-gradient(to bottom, rgba(20, 8, 10, .55), rgba(20, 8, 10, 0));
+      color: var(--offwhite);
+      font-family: "Switzer", "Inter", Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
 
-/* ---------- FAQ ---------- */
-.faq {
-  background: var(--offwhite);
-  padding: 80px 24px;
-}
-@media (min-width: 720px) { .faq { padding: 160px 48px; } }
-.faq-inner { max-width: 920px; margin: 0 auto; }
-.faq .head { margin-bottom: 40px; }
-@media (min-width: 720px) { .faq .head { margin-bottom: 56px; } }
-.faq .head .eb {
-  font-family: var(--font-body); font-size: 11px;
-  letter-spacing: .22em; text-transform: uppercase;
-  color: var(--fg-muted);
-}
-.faq h2 {
-  font-family: "Cormorant Garamond", var(--font-display);
-  font-size: clamp(32px, 8vw, 60px);
-  line-height: 1.06;
-  letter-spacing: -.02em;
-  margin: 20px 0 0; font-weight: 700;
-}
-.faq-item {
-  padding: 20px 0;
-  border-top: 1px solid var(--fg-rule);
-  cursor: pointer;
-  -webkit-tap-highlight-color: rgba(52,5,5,.05);
-}
-@media (min-width: 720px) { .faq-item { padding: 24px 0; } }
-.faq-item:last-child { border-bottom: 1px solid var(--fg-rule); }
-.faq-q {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 24px;
-  align-items: baseline;
-}
-.faq-q-text {
-  font-family: var(--font-body); font-size: 15px; font-weight: 600;
-  color: var(--fg-primary);
-  line-height: 1.4;
-}
-@media (min-width: 720px) { .faq-q-text { font-size: 17px; } }
-.faq-glyph {
-  font-family: var(--font-body); font-size: 20px; font-weight: 600;
-  opacity: .55; transition: opacity var(--dur-base) var(--ease-sacred);
-  width: 16px; text-align: center;
-}
-.faq-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height var(--dur-slow) var(--ease-sacred),
-              margin-top var(--dur-slow) var(--ease-sacred),
-              opacity var(--dur-slow) var(--ease-sacred);
-  opacity: 0;
-  font-family: var(--font-body); font-size: 14px; font-weight: 600;
-  line-height: 1.7; color: var(--fg-secondary);
-  max-width: 720px;
-}
-@media (min-width: 720px) { .faq-a { font-size: 15px; } }
-.faq-item.open .faq-a { max-height: 400px; margin-top: 16px; opacity: 1; }
-.faq-item.open .faq-glyph { opacity: 1; }
+    @media (min-width: 720px) {
+      .topbar {
+        padding: 18px 32px;
+      }
+    }
 
-/* ---------- CTA FINAL ---------- */
-.final {
-  background: var(--vinho);
-  color: var(--fg-on-dark);
-  padding: 100px 24px 120px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-@media (min-width: 720px) { .final { padding: 180px 48px; } }
-.final::before {
-  content: ""; position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(235,223,172,.12), transparent 60%);
-}
-.final > * { position: relative; }
-.final .eb {
-  font-family: var(--font-body); font-size: 11px;
-  letter-spacing: .22em; text-transform: uppercase;
-  color: rgba(235,233,227,.6);
-}
-.final h2 {
-  font-family: "Cormorant Garamond", var(--font-display);
-  font-size: clamp(40px, 11vw, 92px);
-  line-height: 1.0;
-  letter-spacing: -.025em;
-  margin: 24px auto 0;
-  font-weight: 700;
-  max-width: 900px;
-}
-.final h2 em {
-  font-family: var(--font-script); font-style: italic;
-  color: var(--champagne); font-size: 1.4em; line-height: .8;
-  vertical-align: -.05em;
-}
-.final p {
-  margin: 28px auto 36px; max-width: 520px;
-  font-family: var(--font-body); font-size: 15px; font-weight: 600;
-  line-height: 1.65; opacity: .82;
-}
-@media (min-width: 720px) { .final p { font-size: 16px; margin: 36px auto 48px; } }
-@media (max-width: 719px) {
-  .final .btn { display: flex; width: 100%; justify-content: center; font-size: 11px; letter-spacing: .06em; padding: 20px 20px; }
-}
-.final .meta {
-  margin-top: 28px;
-  display: flex; gap: 12px 18px; justify-content: center;
-  font-family: var(--font-body); font-size: 10px;
-  letter-spacing: .2em; text-transform: uppercase;
-  color: rgba(235,233,227,.55);
-  flex-wrap: wrap;
-}
-@media (min-width: 720px) { .final .meta { gap: 24px; font-size: 11px; letter-spacing: .22em; } }
-.final .meta .sep { opacity: .4; }
-@media (max-width: 540px) { .final .meta .sep { display: none; } }
+    .topbar a {
+      pointer-events: auto;
+      border-bottom: 0;
+    }
 
-/* ---------- FOOTER ---------- */
-footer {
-  background: var(--black-ink);
-  color: var(--fg-on-dark);
-  padding: 56px 24px 40px;
-  padding-bottom: calc(40px + env(safe-area-inset-bottom));
-}
-@media (min-width: 720px) { footer { padding: 64px 32px 48px; } }
-.footer-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr;
-  gap: 40px;
-}
-@media (min-width: 720px) {
-  .footer-inner { grid-template-columns: 2fr 1fr 1fr; gap: 48px; }
-}
-footer .mark {
-  font-family: var(--font-display); font-size: 28px;
-  letter-spacing: -.01em; text-transform: uppercase;
-}
-footer .tag {
-  font-family: var(--font-script); font-style: italic;
-  color: var(--champagne); font-size: 32px;
-  line-height: 1; margin-top: 8px;
-}
-footer .col h4 {
-  font-family: var(--font-body); font-size: 11px;
-  letter-spacing: .22em; text-transform: uppercase;
-  font-weight: 600; opacity: .55;
-  margin: 0 0 14px;
-}
-footer .col p, footer .col a {
-  display: block; font-family: var(--font-body); font-size: 14px;
-  font-weight: 600; line-height: 1.55; color: rgba(235,233,227,.85);
-  margin: 0 0 6px; border-bottom: 0;
-}
-footer .col a:hover { opacity: .65; }
-footer .legal {
-  margin-top: 40px; padding-top: 24px;
-  border-top: 1px solid rgba(235,233,227,.15);
-  display: flex; justify-content: space-between;
-  font-family: var(--font-body); font-size: 10px;
-  letter-spacing: .18em; text-transform: uppercase;
-  color: rgba(235,233,227,.45);
-  flex-wrap: wrap; gap: 12px;
-}
-@media (min-width: 720px) { footer .legal { margin-top: 56px; padding-top: 28px; font-size: 11px; } }
+    .topbar .mark {
+      font-family: "Switzer", "Inter", Arial, sans-serif;
+      font-size: 16px;
+      letter-spacing: -.01em;
+      text-transform: uppercase;
+    }
 
-/* ---------- STICKY MOBILE CTA ---------- */
-.sticky-cta {
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  z-index: 60;
-  display: none;
-  padding: 0;
-  transform: translateY(100%);
-  transition: transform var(--dur-base) var(--ease-sacred);
-}
-.sticky-cta.show { transform: translateY(0); }
-@media (max-width: 720px) {
-  .sticky-cta { display: block; }
-  body.has-sticky-cta { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
-}
-.sticky-cta .row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: var(--vinho);
-  padding: 12px 12px calc(12px + env(safe-area-inset-bottom, 0px)) 16px;
-  border-top: 1px solid rgba(235,223,172,.35);
-}
-.sticky-cta .price-block {
-  display: flex; flex-direction: column; gap: 2px;
-  color: var(--champagne);
-  font-family: var(--font-body);
-  line-height: 1;
-  flex: 1;
-  min-width: 0;
-}
-.sticky-cta .price-eb {
-  font-size: 9px; letter-spacing: .22em;
-  text-transform: uppercase; opacity: .8;
-}
-.sticky-cta .price-val {
-  font-size: 18px; font-weight: 600; letter-spacing: -.01em;
-  margin-top: 4px;
-}
-.sticky-cta .price-val .lot-label {
-  font-family: var(--font-script); font-style: italic;
-  font-size: 22px; letter-spacing: 0; margin-left: 6px;
-  opacity: .85;
-}
-.sticky-cta .btn-mini {
-  font-family: var(--font-body);
-  font-size: 12px; font-weight: 600;
-  letter-spacing: .08em; text-transform: uppercase;
-  color: var(--vinho); background: var(--champagne);
-  padding: 14px 18px;
-  border-radius: 2px;
-  text-decoration: none;
-  border: 0;
-  white-space: nowrap;
-  min-height: 44px;
-  display: inline-flex; align-items: center; gap: 8px;
-}
-</style>
+    .topbar .right {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    @media (min-width: 720px) {
+      .topbar .right {
+        gap: 28px;
+      }
+    }
+
+    .topbar .right .cta {
+      color: var(--champagne);
+      border-bottom: 1px solid var(--champagne);
+      padding-bottom: 2px;
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        font-size: 12px;
+        letter-spacing: .18em;
+      }
+
+      .topbar .mark {
+        font-size: 14px;
+      }
+
+      .topbar .right .hide-sm {
+        display: none;
+      }
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+      background: var(--bg-deep);
+      color: var(--fg-on-dark);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 88px 20px 28px;
+      overflow: hidden;
+      position: relative;
+      gap: 24px;
+    }
+
+    @media (min-width: 720px) {
+      .hero {
+        padding: 112px 48px 48px;
+        gap: 0;
+      }
+    }
+
+    .hero .photo {
+      position: absolute;
+      inset: 0;
+      background-image: url("assets/pilares.jpg");
+      background-size: cover;
+      background-position: center 30%;
+      filter: sepia(.6) saturate(.55) brightness(.42) contrast(1.15) hue-rotate(-12deg);
+      opacity: .65;
+    }
+
+    .hero .vignette {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 70% 25%, rgba(235, 223, 172, .16), transparent 55%),
+        radial-gradient(ellipse at 50% 110%, rgba(52, 5, 5, .95), rgba(36, 20, 6, .55) 45%, transparent 75%),
+        linear-gradient(to bottom, rgba(36, 20, 6, .55), rgba(20, 8, 10, .85));
+    }
+
+    .hero .grain {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.9 0 0 0 0 0.85 0 0 0 0 0.7 0 0 0 0.16 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+      opacity: .35;
+      mix-blend-mode: overlay;
+    }
+
+    .hero>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      opacity: .8;
+      gap: 12px;
+    }
+
+    @media (min-width: 720px) {
+      .hero-eyebrow {
+        font-size: 11px;
+        letter-spacing: .22em;
+      }
+    }
+
+    .hero-eyebrow span {
+      font-family: "Switzer", "Inter", Arial, sans-serif;
+    }
+
+    .hero-eyebrow .dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: var(--champagne);
+      margin-right: 10px;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
+
+    .hero-mark {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      text-align: center;
+      margin: auto 0;
+    }
+
+    .hero-mark .conf {
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--champagne);
+      font-size: clamp(48px, 13vw, 120px);
+      line-height: .85;
+      margin-bottom: -.2em;
+      margin-left: 4%;
+      align-self: flex-start;
+    }
+
+    .hero-mark .word {
+      font-family: "Arenta", sans-serif;
+      font-size: clamp(56px, 17vw, 220px);
+      line-height: .88;
+      letter-spacing: -.02em;
+      text-transform: uppercase;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .hero-mark .edition {
+      font-family: "Switzer", "Inter", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      opacity: .82;
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 14px;
+    }
+
+    @media (min-width: 720px) {
+      .hero-mark .edition {
+        font-size: 16px;
+        letter-spacing: .22em;
+        gap: 0;
+        display: block;
+      }
+
+      .hero-mark .edition .sep {
+        opacity: .4;
+        margin: 0 14px;
+        display: inline;
+      }
+    }
+
+    .hero-mark .edition .sep {
+      opacity: .4;
+    }
+
+    @media (max-width: 719px) {
+      .hero-mark .edition .sep {
+        display: none;
+      }
+    }
+
+    .hero-tagline {
+      text-align: center;
+      margin: 8px auto 0;
+      max-width: 640px;
+    }
+
+    .hero-tagline .tagline-text {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(22px, 5.4vw, 38px);
+      line-height: 1.25;
+      letter-spacing: .005em;
+      color: var(--offwhite);
+      margin: 0 0 26px;
+    }
+
+    .hero-tagline .tagline-text .word-rest {
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--champagne);
+      font-size: 1.85em;
+      line-height: .7;
+      vertical-align: -.12em;
+      letter-spacing: .01em;
+    }
+
+    .hero-tagline .tagline-text .word-enr {
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--champagne);
+      font-size: 1.85em;
+      line-height: .7;
+      vertical-align: -.12em;
+      letter-spacing: .01em;
+    }
+
+    .hero-tagline .tagline-text .word-inab {
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--champagne);
+      font-size: 1.85em;
+      line-height: .7;
+      vertical-align: -.12em;
+      letter-spacing: .01em;
+    }
+
+    .hero-foot {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .hero-foot .cta-block {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ---------- BUTTONS ---------- */
+    .btn {
+      font-family: var(--font-body);
+      font-size: 15px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 16px 24px;
+      min-height: 48px;
+      border-radius: 2px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background var(--dur-base) var(--ease-sacred),
+        color var(--dur-base) var(--ease-sacred),
+        opacity var(--dur-base) var(--ease-sacred);
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      line-height: 1.2;
+    }
+
+    .btn:hover {
+      opacity: 1;
+    }
+
+    @media (min-width: 720px) {
+      .btn {
+        padding: 18px 32px;
+      }
+    }
+
+    .btn .arrow {
+      font-family: var(--font-body);
+      font-weight: 400;
+      opacity: .8;
+      transition: transform var(--dur-base) var(--ease-sacred);
+    }
+
+    .btn:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    .btn-primary {
+      background: var(--vinho);
+      color: var(--champagne);
+      border-color: var(--vinho);
+    }
+
+    .btn-primary:hover {
+      background: var(--mocha);
+      border-color: var(--mocha);
+    }
+
+    .btn-champagne {
+      background: var(--champagne);
+      color: var(--vinho);
+      border-color: var(--champagne);
+    }
+
+    .btn-champagne:hover {
+      background: #f5edbe;
+      border-color: #f5edbe;
+    }
+
+    .btn-onlight {
+      background: var(--espresso);
+      color: var(--offwhite);
+      border-color: var(--espresso);
+    }
+
+    .btn-onlight:hover {
+      background: var(--vinho);
+      border-color: var(--vinho);
+    }
+
+    .btn-ghost-dark {
+      background: transparent;
+      color: var(--champagne);
+      border-color: rgba(235, 223, 172, .45);
+    }
+
+    .btn-ghost-dark:hover {
+      background: rgba(235, 223, 172, .08);
+    }
+
+    .btn-large {
+      padding: 20px 32px;
+      font-size: 18px;
+      min-height: 60px;
+    }
+
+    @media (min-width: 720px) {
+      .btn-large {
+        padding: 22px 44px;
+        font-size: 20px;
+      }
+    }
+
+    /* ---------- MARQUEE ---------- */
+    .marquee {
+      overflow: hidden;
+      border-top: 1px solid var(--fg-rule);
+      border-bottom: 1px solid var(--fg-rule);
+      padding: 16px 0;
+      background: var(--offwhite);
+    }
+
+    .marquee.dark {
+      background: var(--bg-deep);
+      border-color: var(--fg-rule-dark);
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 56px;
+      white-space: nowrap;
+      width: max-content;
+      animation: marquee 60s linear infinite;
+    }
+
+    .marquee-track span {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(36, 20, 6, .62);
+    }
+
+    .marquee.dark .marquee-track span {
+      color: rgba(235, 233, 227, 1);
+      font-weight: 700;
+    }
+
+    .marquee-track .sep {
+      color: var(--vinho);
+    }
+
+    .marquee.dark .marquee-track .sep {
+      color: var(--champagne);
+    }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ---------- MANIFESTO ---------- */
+    .invited {
+      background: var(--vinho);
+      color: var(--fg-on-dark);
+      padding: 80px 24px;
+    }
+
+    @media (min-width: 720px) {
+      .invited {
+        padding: 160px 48px;
+      }
+    }
+
+    .invited-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    @media (min-width: 880px) {
+      .invited-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+      }
+    }
+
+    .invited .eyebrow-mark {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(235, 233, 227, .55);
+    }
+
+    .invited h2 {
+      font-family: "Cormorant Garamond", var(--font-display);
+      font-size: clamp(34px, 8.5vw, 76px);
+      line-height: 1.06;
+      letter-spacing: -.02em;
+      margin: 28px 0 0;
+      font-weight: 700;
+    }
+
+    .invited h2 em {
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--champagne);
+      font-weight: 400;
+      font-size: clamp(56px, 14vw, 108px);
+      line-height: 1;
+      display: block;
+      margin-top: -.1em;
+    }
+
+    .invited p {
+      font-family: var(--font-body);
+      font-size: 20px;
+      line-height: 1.7;
+      font-weight: 700;
+      margin: 28px 0 0;
+      opacity: .82;
+    }
+
+    @media (min-width: 720px) {
+      .invited p {
+        font-size: 22px;
+        margin-top: 36px;
+      }
+    }
+
+    .invited p+p {
+      margin-top: 18px;
+    }
+
+    .invited p strong {
+      color: var(--champagne);
+      font-weight: 600;
+    }
+
+    .invited-video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .video-mockup {
+      width: 100%;
+      max-width: 260px;
+      aspect-ratio: 9/16;
+      background: rgba(0, 0, 0, .35);
+      border: 1px solid rgba(235, 223, 172, .28);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-mockup::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(235, 223, 172, .08), transparent 65%);
+    }
+
+    .video-play {
+      width: 60px;
+      height: 60px;
+      border: 1.5px solid rgba(235, 223, 172, .55);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .video-play::after {
+      content: "▶";
+      color: var(--champagne);
+      font-size: 18px;
+      margin-left: 4px;
+      opacity: .8;
+    }
+
+    .video-label {
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(235, 223, 172, .5);
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    /* ---------- LARISSA ---------- */
+    .larissa {
+      background: var(--offwhite);
+      padding: 80px 24px;
+    }
+
+    @media (min-width: 720px) {
+      .larissa {
+        padding: 160px 48px;
+      }
+    }
+
+    .larissa-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (min-width: 880px) {
+      .larissa-grid {
+        grid-template-columns: .9fr 1.1fr;
+        gap: 80px;
+      }
+    }
+
+    .larissa-portrait {
+      background: var(--areia) url("assets/larissa.jpg") center/cover no-repeat;
+      aspect-ratio: 4/5;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--fg-rule);
+      max-width: 360px;
+      width: 100%;
+      margin: 0 auto;
+      filter: sepia(.18) saturate(.9) contrast(1.04);
+    }
+
+    @media (min-width: 880px) {
+      .larissa-portrait {
+        max-width: none;
+      }
+    }
+
+    .larissa-portrait::after {
+      content: "Larissa Garbiati";
+      position: absolute;
+      inset: auto 0 16px 16px;
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(235, 233, 227, .85);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, .45);
+    }
+
+    .larissa-meta {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+
+    .larissa h2 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 9vw, 68px);
+      line-height: 1.04;
+      letter-spacing: -.02em;
+      margin: 24px 0 28px;
+      font-weight: 400;
+    }
+
+    .larissa h2 em {
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--vinho);
+      font-size: 1.4em;
+      line-height: .8;
+      vertical-align: -.05em;
+    }
+
+    .larissa-bio {
+      border-top: 1px solid var(--fg-rule);
+      padding-top: 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .larissa-bio dt {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+
+    .larissa-bio dd {
+      margin: 0 0 12px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--fg-primary);
+      line-height: 1.5;
+    }
+
+    .larissa-bio dd a {
+      border-bottom: 1px solid currentColor;
+    }
+
+    .larissa-bio dd em {
+      font-style: italic;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 700;
+    }
+
+    /* ---------- CONVIDADOS ---------- */
+    .speakers {
+      background: var(--bg-calm);
+      padding: 80px 24px;
+    }
+
+    @media (min-width: 720px) {
+      .speakers {
+        padding: 160px 48px;
+      }
+    }
+
+    .speakers-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .speakers .eb {
+      font-family: "Arenta";
+      font-size: 11px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+
+    .speakers h2 {
+      font-family: "Cormorant Garamond", var(--font-display);
+      font-size: clamp(32px, 8vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -.02em;
+      margin: 20px 0 48px;
+      font-weight: 700;
+    }
+
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    @media (min-width: 720px) {
+      .speakers-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+      }
+    }
+
+    .speaker-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .speaker-photo {
+      aspect-ratio: 3/4;
+      background: rgba(36, 20, 6, .06);
+      border: 1px dashed rgba(36, 20, 6, .22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .speaker-photo::before {
+      content: "Foto";
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+
+    .speaker-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(22px, 3.5vw, 30px);
+      letter-spacing: -.01em;
+      font-weight: 700;
+      color: var(--fg-primary);
+      line-height: 1.2;
+    }
+
+    .speaker-role {
+      font-family: var(--font-body);
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      margin-top: -8px;
+    }
+
+    /* ---------- QUANDO / ONDE ---------- */
+    .when {
+      background: var(--espresso);
+      color: var(--fg-on-dark);
+      padding: 80px 24px;
+    }
+
+    @media (min-width: 720px) {
+      .when {
+        padding: 160px 48px;
+      }
+    }
+
+    .when-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    @media (min-width: 880px) {
+      .when-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+      }
+    }
+
+    .when .col-head {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(235, 233, 227, .55);
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(235, 233, 227, .18);
+      margin-bottom: 28px;
+    }
+
+    .when .big {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 8vw, 64px);
+      line-height: 1.06;
+      letter-spacing: -.02em;
+      font-weight: 700;
+    }
+
+    .when .big em {
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--champagne);
+      font-size: 1.35em;
+      line-height: .8;
+      vertical-align: -.05em;
+    }
+
+    .when .sub {
+      font-family: var(--font-body);
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.6;
+      margin-top: 24px;
+      opacity: .78;
+      max-width: 420px;
+    }
+
+    .when .sub a {
+      border-bottom: 1px solid rgba(235, 223, 172, .55);
+      color: var(--champagne);
+    }
+
+    .when .horarios {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(235, 233, 227, .18);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .when .horario-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 700;
+      opacity: .75;
+    }
+
+    .when .horario-item .horario-label {
+      font-size: 13px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      opacity: .65;
+    }
+
+    .when .horario-item .horario-time {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--champagne);
+      opacity: 1;
+    }
+
+    /* ---------- INSCRIÇÕES ---------- */
+    .lots {
+      background: var(--offwhite);
+      padding: 80px 20px 120px;
+    }
+
+    @media (min-width: 720px) {
+      .lots {
+        padding: 160px 48px;
+      }
+    }
+
+    .lots-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .lots .head {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 720px) {
+      .lots .head {
+        margin-bottom: 64px;
+      }
+    }
+
+    .lots .head .eb {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+
+    .lots h2 {
+      font-family: "Cormorant Garamond", var(--font-display);
+      font-size: clamp(32px, 8vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -.02em;
+      margin: 20px 0 0;
+      font-weight: 700;
+    }
+
+    .lots h2 em {
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--vinho);
+      font-size: 1.35em;
+      line-height: .8;
+      vertical-align: -.05em;
+    }
+
+    .lots-cta {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 18px;
+      text-align: center;
+    }
+
+    @media (min-width: 720px) {
+      .lots-cta {
+        margin-top: 56px;
+        align-items: center;
+      }
+    }
+
+    .lots-cta .btn {
+      justify-content: center;
+    }
+
+    .lots-cta .secure {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--fg-muted);
+      font-weight: 700;
+      line-height: 1.55;
+    }
+
+    /* ---------- FOTO DO PÚBLICO ---------- */
+    .audience {
+      background: var(--espresso);
+      overflow: hidden;
+    }
+
+    .audience img {
+      width: 100%;
+      height: clamp(280px, 50vh, 560px);
+      object-fit: cover;
+      object-position: center 40%;
+      filter: sepia(.35) saturate(.7) brightness(.85) contrast(1.05);
+    }
+
+    .audience-cap {
+      background: var(--espresso);
+      color: var(--fg-on-dark);
+      text-align: center;
+      padding: 32px 32px 56px;
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--champagne);
+      font-size: clamp(36px, 5vw, 56px);
+      line-height: .9;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq {
+      background: var(--offwhite);
+      padding: 80px 24px;
+    }
+
+    @media (min-width: 720px) {
+      .faq {
+        padding: 160px 48px;
+      }
+    }
+
+    .faq-inner {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .faq .head {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 720px) {
+      .faq .head {
+        margin-bottom: 56px;
+      }
+    }
+
+    .faq .head .eb {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+
+    .faq h2 {
+      font-family: "Cormorant Garamond", var(--font-display);
+      font-size: clamp(32px, 8vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -.02em;
+      margin: 20px 0 0;
+      font-weight: 700;
+    }
+
+    .faq-item {
+      padding: 20px 0;
+      border-top: 1px solid var(--fg-rule);
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(52, 5, 5, .05);
+    }
+
+    @media (min-width: 720px) {
+      .faq-item {
+        padding: 24px 0;
+      }
+    }
+
+    .faq-item:last-child {
+      border-bottom: 1px solid var(--fg-rule);
+    }
+
+    .faq-q {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: baseline;
+    }
+
+    .faq-q-text {
+      font-family: var(--font-body);
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--fg-primary);
+      line-height: 1.4;
+    }
+
+    @media (min-width: 720px) {
+      .faq-q-text {
+        font-size: 21px;
+      }
+    }
+
+    .faq-glyph {
+      font-family: var(--font-body);
+      font-size: 22px;
+      font-weight: 700;
+      opacity: .55;
+      transition: opacity var(--dur-base) var(--ease-sacred);
+      width: 16px;
+      text-align: center;
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--dur-slow) var(--ease-sacred),
+        margin-top var(--dur-slow) var(--ease-sacred),
+        opacity var(--dur-slow) var(--ease-sacred);
+      opacity: 0;
+      font-family: var(--font-body);
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.7;
+      color: var(--fg-secondary);
+      max-width: 720px;
+    }
+
+    @media (min-width: 720px) {
+      .faq-a {
+        font-size: 19px;
+      }
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 400px;
+      margin-top: 16px;
+      opacity: 1;
+    }
+
+    .faq-item.open .faq-glyph {
+      opacity: 1;
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .final {
+      background: var(--vinho);
+      color: var(--fg-on-dark);
+      padding: 100px 24px 120px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 720px) {
+      .final {
+        padding: 180px 48px;
+      }
+    }
+
+    .final::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(235, 223, 172, .12), transparent 60%);
+    }
+
+    .final>* {
+      position: relative;
+    }
+
+    .final .eb {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(235, 233, 227, .6);
+    }
+
+    .final h2 {
+      font-family: "Cormorant Garamond", var(--font-display);
+      font-size: clamp(40px, 11vw, 92px);
+      line-height: 1.0;
+      letter-spacing: -.025em;
+      margin: 24px auto 0;
+      font-weight: 700;
+      max-width: 900px;
+    }
+
+    .final h2 em {
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--champagne);
+      font-size: 1.4em;
+      line-height: .8;
+      vertical-align: -.05em;
+    }
+
+    .final p {
+      margin: 28px auto 36px;
+      max-width: 520px;
+      font-family: var(--font-body);
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.65;
+      opacity: .82;
+    }
+
+    @media (min-width: 720px) {
+      .final p {
+        font-size: 21px;
+        margin: 36px auto 48px;
+      }
+    }
+
+    @media (max-width: 719px) {
+      .final .btn {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: 16px;
+        letter-spacing: .06em;
+        padding: 20px 20px;
+      }
+    }
+
+    .final .meta {
+      margin-top: 28px;
+      display: flex;
+      gap: 12px 18px;
+      justify-content: center;
+      font-family: "Switzer", "Inter", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(235, 233, 227, .7);
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: 720px) {
+      .final .meta {
+        gap: 24px;
+        font-size: 15px;
+        letter-spacing: .22em;
+      }
+    }
+
+    .final .meta .sep {
+      opacity: .4;
+    }
+
+    @media (max-width: 540px) {
+      .final .meta .sep {
+        display: none;
+      }
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--black-ink);
+      color: var(--fg-on-dark);
+      padding: 56px 24px 40px;
+      padding-bottom: calc(40px + env(safe-area-inset-bottom));
+    }
+
+    @media (min-width: 720px) {
+      footer {
+        padding: 64px 32px 48px;
+      }
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    @media (min-width: 720px) {
+      .footer-inner {
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 48px;
+      }
+    }
+
+    footer .mark {
+      font-family: var(--font-display);
+      font-size: 28px;
+      letter-spacing: -.01em;
+      text-transform: uppercase;
+    }
+
+    footer .tag {
+      font-family: var(--font-script);
+      font-style: italic;
+      color: var(--champagne);
+      font-size: 32px;
+      line-height: 1;
+      margin-top: 8px;
+    }
+
+    footer .col h4 {
+      font-family: var(--font-body);
+      font-size: 13px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: .55;
+      margin: 0 0 14px;
+    }
+
+    footer .col p,
+    footer .col a {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.55;
+      color: rgba(235, 233, 227, .85);
+      margin: 0 0 6px;
+      border-bottom: 0;
+    }
+
+    footer .col a:hover {
+      opacity: .65;
+    }
+
+    footer .legal {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(235, 233, 227, .15);
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: rgba(235, 233, 227, .45);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (min-width: 720px) {
+      footer .legal {
+        margin-top: 56px;
+        padding-top: 28px;
+        font-size: 11px;
+      }
+    }
+
+    /* ---------- STICKY MOBILE CTA ---------- */
+    .sticky-cta {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 60;
+      display: none;
+      padding: 0;
+      transform: translateY(100%);
+      transition: transform var(--dur-base) var(--ease-sacred);
+    }
+
+    .sticky-cta.show {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 720px) {
+      .sticky-cta {
+        display: block;
+      }
+
+      body.has-sticky-cta {
+        padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px));
+      }
+    }
+
+    .sticky-cta .row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--vinho);
+      padding: 12px 12px calc(12px + env(safe-area-inset-bottom, 0px)) 16px;
+      border-top: 1px solid rgba(235, 223, 172, .35);
+    }
+
+    .sticky-cta .price-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      color: var(--champagne);
+      font-family: var(--font-body);
+      line-height: 1;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .sticky-cta .price-eb {
+      font-size: 9px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      opacity: .8;
+    }
+
+    .sticky-cta .price-val {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .sticky-cta .btn-mini {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--vinho);
+      background: var(--champagne);
+      padding: 14px 18px;
+      border-radius: 2px;
+      text-decoration: none;
+      border: 0;
+      white-space: nowrap;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- BARRA SUPERIOR -->
-<div class="topbar">
-  <a href="#top" class="mark">Madalenas</a>
-  <div class="right">
-    <span class="hide-sm">07.11.2026 · São Paulo</span>
-    <a href="#inscricao" class="cta">Inscreva-se</a>
-  </div>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="top">
-  <div class="photo" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-
-  <div class="hero-eyebrow">
-    <span><span class="dot"></span>3ª edição</span>
-    <span>São Paulo · 2026</span>
-  </div>
-
-  <div class="hero-mark">
-    <div class="conf">Conferência</div>
-    <div class="word">Madalenas</div>
-    <div class="edition">
-      <span>07 de novembro</span><span class="sep">+</span><span>São Paulo</span><span class="sep">+</span><span>Teatro Tokio Marine Hall</span>
+  <!-- BARRA SUPERIOR -->
+  <div class="topbar">
+    <a href="#top" class="mark">Madalenas</a>
+    <div class="right">
+      <span class="hide-sm">07.11.2026 · São Paulo</span>
+      <a href="#inscricao" class="cta">Inscreva-se</a>
     </div>
   </div>
 
-  <div class="hero-tagline">
-    <div class="tagline-text">
-      <span class="word-rest">Restauradas, </span><span class="word-enr">enraizadas</span><span class="word-inab"> e inabaláveis.</span>
-    </div>
-  </div>
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="photo" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
 
-  <div class="hero-foot">
-    <div class="cta-block">
-      <span class="hero-lot-flag"><span class="pulse"></span>Primeiro lote · aberto</span>
-      <a href="#inscricao" class="btn btn-champagne btn-large">Garantir minha vaga<span class="arrow">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- MARQUEE CLARO -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track" id="marquee-light"></div>
-</div>
-
-<!-- MANIFESTO -->
-<section class="invited">
-  <span class="eyebrow-mark">— 01 / Manifesto</span>
-  <h2>
-    Restauradas,<br/>
-    enraizadas<br/>
-    <em>e inabaláveis.</em>
-  </h2>
-  <p>Deus quer restaurar os muros destruídos<br/>da vida de muitas mulheres</p>
-  <p>transformando sobreviventes em pilares<br/>que sustentarão outras.</p>
-</section>
-
-<!-- LARISSA GARBIATI -->
-<section class="larissa">
-  <div class="larissa-grid">
-    <div class="larissa-portrait" aria-label="Retrato de Larissa Garbiati"></div>
-    <div>
-      <div class="larissa-meta">— 02 / Quem conduz</div>
-      <h2>
-        <em>Larissa</em><br/>
-        Garbiati
-      </h2>
-      <dl class="larissa-bio">
-        <dt>Vocação</dt>
-        <dd>Líder do Ministério de mulheres Madalenas, <a href="https://www.instagram.com/somos.madalenas/" target="_blank" rel="noopener">@somos.madalenas</a></dd>
-
-        <dt>Família</dt>
-        <dd>Esposa de Flávio Vitor Jr.</dd>
-        <dd>Mãe do Israel e do Caetano</dd>
-
-        <dt>Voz</dt>
-        <dd>Host do podcast <em>Seguimos Tentando</em></dd>
-        <dd>Autora de <em>Trago seu amor em 7 dias</em></dd>
-      </dl>
-    </div>
-  </div>
-</section>
-
-<!-- MARQUEE ESCURO -->
-<div class="marquee dark" aria-hidden="true">
-  <div class="marquee-track" id="marquee-dark"></div>
-</div>
-
-<!-- QUANDO / ONDE -->
-<section class="when">
-  <div class="when-inner">
-    <div>
-      <div class="col-head">— 03 / Quando</div>
-      <div class="big">07 de <em>novembro</em><br/>de 2026</div>
-      <div class="sub">Sábado. Um único dia, do começo ao fim.</div>
-    </div>
-    <div>
-      <div class="col-head">— 04 / Onde</div>
-      <div class="big">Teatro Tokio<br/>Marine <em>Hall</em></div>
-      <div class="sub">
-        R. Bragança Paulista, 1281<br/>
-        Várzea de Baixo · São Paulo · SP<br/>
-        <a href="https://maps.google.com/?q=Teatro+Tokio+Marine+Hall+São+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- LOTES / INSCRIÇÕES -->
-<section class="lots" id="inscricao">
-  <div class="lots-inner">
-    <div class="head">
-      <div class="eb">— 05 / Inscrições</div>
-      <h2>O primeiro lote<br/>está aberto.</h2>
+    <div class="hero-eyebrow">
+      <span><span class="dot"></span>3ª edição</span>
+      <span>São Paulo · 2026</span>
     </div>
 
-    <div class="lot-list">
-      <div class="lot open">
-        <div class="num">01</div>
-        <div class="name">Primeiro lote<small>quantidade limitada</small></div>
-        <div class="price">R$ 150<small>à vista</small></div>
-        <div class="status">Aberto agora</div>
-      </div>
-      <div class="lot next">
-        <div class="num">02</div>
-        <div class="name">Segundo lote<small>após o esgotamento</small></div>
-        <div class="price">—</div>
-        <div class="status">Em breve</div>
-      </div>
-      <div class="lot next">
-        <div class="num">03</div>
-        <div class="name">Terceiro lote<small>após o esgotamento</small></div>
-        <div class="price">—</div>
-        <div class="status">Em breve</div>
+    <div class="hero-mark">
+      <div class="conf">Conferência</div>
+      <div class="word">Madalenas</div>
+      <div class="edition">
+        <span>07 de novembro</span><span class="sep">+</span><span>São Paulo</span><span
+          class="sep">+</span><span>Teatro Tokio Marine Hall</span>
       </div>
     </div>
 
-    <div class="lots-cta">
-      <span class="scarcity">— Cada lote esgota antes do próximo abrir —</span>
-      <a href="#checkout" class="btn btn-onlight btn-large" id="primary-cta">Inscrever-me — R$&nbsp;150<span class="arrow">→</span></a>
-      <span class="secure">Pagamento processado em ambiente seguro · pix, débito ou crédito em até 12x</span>
+    <div class="hero-tagline">
+      <div class="tagline-text">
+        <span class="word-rest">Restauradas, </span><span class="word-enr">enraizadas</span><span class="word-inab"> e
+          inabaláveis.</span>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="cta-block">
+        <a href="#inscricao" class="btn btn-champagne btn-large">Garantir minha vaga<span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE CLARO -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee-light"></div>
+  </div>
+
+  <!-- MANIFESTO -->
+  <section class="invited">
+    <div class="invited-inner">
+      <div class="invited-text">
+        <span class="eyebrow-mark">— 01 / Manifesto</span>
+        <h2>
+          Restauradas,<br />
+          enraizadas<br />
+          <em>e inabaláveis.</em>
+        </h2>
+        <p>Uma obra precisa ser realizada na sua vida: <strong>RESTAURAÇÃO!</strong></p>
+        <p>Deus quer restaurar tudo aquilo que foi perdido, te tornar uma mulher forte e inabalável, capaz de ser,
+          aquilo que Ele te chamou para ser.</p>
+      </div>
+      <div class="invited-video">
+        <div class="video-mockup">
+          <div class="video-play"></div>
+          <div class="video-label">Teaser em breve</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LARISSA GARBIATI -->
+  <section class="larissa">
+    <div class="larissa-grid">
+      <div class="larissa-portrait" aria-label="Retrato de Larissa Garbiati"></div>
+      <div>
+        <div class="larissa-meta">— 02 / Quem conduz</div>
+        <h2>
+          <em>Larissa</em><br />
+          Garbiati
+        </h2>
+        <dl class="larissa-bio">
+          <dt>Vocação</dt>
+          <dd>Líder do Ministério de mulheres Madalenas, <a href="https://www.instagram.com/somos.madalenas/"
+              target="_blank" rel="noopener">@somos.madalenas</a></dd>
+
+          <dt>Família</dt>
+          <dd>Esposa de Flávio Vitor Jr.</dd>
+          <dd>Mãe do Israel e do Caetano</dd>
+
+          <dt>Voz</dt>
+          <dd>Host do podcast <em>Seguimos Tentando</em></dd>
+          <dd>Autora do livro <em>Trago seu amor em 7 dias</em></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE ESCURO -->
+  <div class="marquee dark" aria-hidden="true">
+    <div class="marquee-track" id="marquee-dark"></div>
+  </div>
+
+  <!-- CONVIDADOS -->
+  <section class="speakers">
+    <div class="speakers-inner">
+      <div class="eb">— 03 / Convidados</div>
+      <h2>Convidados.</h2>
+      <div class="speakers-grid">
+        <div class="speaker-card">
+          <div class="speaker-photo" aria-label="Foto de Flávio Vitor Jr."></div>
+          <div class="speaker-name">Flávio Vitor Jr.</div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo" aria-label="Foto de Marília Mello"></div>
+          <div class="speaker-name">Marília Mello</div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo" aria-label="Foto de Bruna Marques"></div>
+          <div class="speaker-name">Bruna Marques</div>
+        </div>
+        <div class="speaker-card">
+          <div class="speaker-photo" aria-label="Foto de Nandah"></div>
+          <div class="speaker-name">Nandah</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUANDO / ONDE -->
+  <section class="when">
+    <div class="when-inner">
+      <div>
+        <div class="col-head">— 04 / Quando</div>
+        <div class="big">07 de novembro<br />de <em>2026</em></div>
+        <div class="sub">Sábado. Um único dia, do começo ao fim.</div>
+        <div class="horarios">
+          <div class="horario-item">
+            <span class="horario-label">Abertura dos portões</span>
+            <span class="horario-time">08h00</span>
+          </div>
+          <div class="horario-item">
+            <span class="horario-label">Previsão de término</span>
+            <span class="horario-time">22h00</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="col-head">— 05 / Onde</div>
+        <div class="big">Teatro Tokio<br />Marine <em>Hall</em></div>
+        <div class="sub">
+          R. Bragança Paulista, 1281<br />
+          Várzea de Baixo · São Paulo · SP<br />
+          <a href="https://maps.google.com/?q=Teatro+Tokio+Marine+Hall+São+Paulo" target="_blank" rel="noopener">Ver no
+            mapa →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSCRIÇÕES -->
+  <section class="lots" id="inscricao">
+    <div class="lots-inner">
+      <div class="head">
+        <div class="eb">— 06 / Inscrições</div>
+        <h2>As vagas<br />são <em>limitadas.</em></h2>
+      </div>
+
+      <div class="lots-cta">
+        <a href="#checkout" class="btn btn-onlight btn-large" id="primary-cta">Inscrever-me<span
+            class="arrow">→</span></a>
+        <span class="secure">Pagamento processado em ambiente seguro · pix, débito ou crédito em até 12x</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOTO DO PÚBLICO -->
+  <section class="audience">
+    <img src="assets/audience.jpg" alt="Mulheres na conferência Madalenas" />
+    <div class="audience-cap">Um lugar de mulheres restauradas.</div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="faq-inner">
+      <div class="head">
+        <div class="eb">— 07 / Perguntas</div>
+        <h2>Perguntas frequentes.</h2>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-text">Onde acontece a Conferência?</div>
+          <div class="faq-glyph">+</div>
+        </div>
+        <div class="faq-a">No Teatro Tokio Marine Hall, em São Paulo. Endereço: R. Bragança Paulista, 1281, Várzea de
+          Baixo. O teatro tem estacionamento próprio e fica próximo à estação João Dias da CPTM.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-text">Quando é o evento?</div>
+          <div class="faq-glyph">+</div>
+        </div>
+        <div class="faq-a">Sábado, 07 de novembro de 2026. Um único dia. A programação completa é divulgada às inscritas
+          em primeira mão, antes da abertura pública.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-text">Posso vir sozinha?</div>
+          <div class="faq-glyph">+</div>
+        </div>
+        <div class="faq-a">Sim. A maioria das mulheres vem sozinha. O encontro foi pensado para que ninguém precise
+          estar acompanhada para se sentir em casa.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-text">Como funciona o pagamento?</div>
+          <div class="faq-glyph">+</div>
+        </div>
+        <div class="faq-a">Após clicar em inscrever-se, você é direcionada para a plataforma de pagamento. Aceitamos
+          pix, cartão de débito e cartão de crédito em até 12x. A confirmação chega por e-mail em alguns minutos.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="final">
+    <div class="eb">— 08 / Convite</div>
+    <h2>Você foi<br /><em>convidada.</em></h2>
+    <p>As vagas são limitadas.<br />Garanta a sua enquanto há tempo.</p>
+    <a href="#checkout" class="btn btn-ghost-dark btn-large">Garantir minha vaga<span class="arrow">→</span></a>
+    <div class="meta">
+      <span>07.11.2026</span>
+      <span class="sep">+</span>
+      <span>São Paulo</span>
+      <span class="sep">+</span>
+      <span>Teatro Tokio Marine Hall</span>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="mark">Madalenas</div>
+        <div class="tag">Restauradas, enraizadas e inabaláveis.</div>
+      </div>
+      <div class="col">
+        <h4>Encontro</h4>
+        <p>07 de novembro de 2026</p>
+        <p>Teatro Tokio Marine Hall</p>
+        <p>R. Bragança Paulista, 1281<br />São Paulo · SP</p>
+        <a href="https://maps.google.com/?q=Teatro+Tokio+Marine+Hall+São+Paulo" target="_blank" rel="noopener">Ver no
+          mapa →</a>
+      </div>
+      <div class="col">
+        <h4>Onde encontrar</h4>
+        <a href="https://www.instagram.com/somos.madalenas/" target="_blank" rel="noopener">@somos.madalenas</a>
+        <a href="#inscricao">Inscreva-se</a>
+      </div>
+    </div>
+    <div class="footer-inner">
+      <div class="legal"
+        style="grid-column: 1 / -1; margin-top: 0; border-top: 1px solid rgba(235,233,227,.15); padding-top: 24px;">
+        <span>© 2026 Conferência Madalenas. Todos os direitos reservados.</span>
+        <span>3ª edição</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- STICKY CTA MOBILE -->
+  <div class="sticky-cta" id="sticky-cta">
+    <div class="row">
+      <div class="price-block">
+        <span class="price-eb">Inscrições abertas</span>
+        <span class="price-val">Vagas limitadas</span>
+      </div>
+      <a href="#inscricao" class="btn-mini">Garantir ingresso <span aria-hidden="true">→</span></a>
     </div>
   </div>
-</section>
 
-<!-- FOTO DO PÚBLICO -->
-<section class="audience">
-  <img src="assets/audience.jpg" alt="Mulheres na conferência Madalenas" />
-  <div class="audience-cap">Um lugar de mulheres restauradas.</div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-  <div class="faq-inner">
-    <div class="head">
-      <div class="eb">— 06 / Perguntas</div>
-      <h2>Antes de você decidir.</h2>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q"><div class="faq-q-text">Onde acontece a Conferência?</div><div class="faq-glyph">+</div></div>
-      <div class="faq-a">No Teatro Tokio Marine Hall, em São Paulo. Endereço: R. Bragança Paulista, 1281, Várzea de Baixo. O teatro tem estacionamento próprio e fica próximo à estação João Dias da CPTM.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q"><div class="faq-q-text">Quando é o evento?</div><div class="faq-glyph">+</div></div>
-      <div class="faq-a">Sábado, 07 de novembro de 2026. Um único dia. A programação completa é divulgada às inscritas em primeira mão, antes da abertura pública.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q"><div class="faq-q-text">Posso vir sozinha?</div><div class="faq-glyph">+</div></div>
-      <div class="faq-a">Sim. A maioria das mulheres vem sozinha. O encontro foi pensado para que ninguém precise estar acompanhada para se sentir em casa.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q"><div class="faq-q-text">Como funciona o pagamento?</div><div class="faq-glyph">+</div></div>
-      <div class="faq-a">Após clicar em inscrever-se, você é direcionada para a plataforma de pagamento. Aceitamos pix, cartão de débito e cartão de crédito em até 12x. A confirmação chega por e-mail em alguns minutos.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q"><div class="faq-q-text">Como funcionam os lotes?</div><div class="faq-glyph">+</div></div>
-      <div class="faq-a">São três lotes ao todo. Cada um tem uma quantidade limitada de vagas. Quando o lote em vigor esgota, o próximo abre automaticamente — com valor maior. Estamos no primeiro lote agora.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q"><div class="faq-q-text">Posso transferir ou cancelar minha inscrição?</div><div class="faq-glyph">+</div></div>
-      <div class="faq-a">A transferência da inscrição para outra mulher é possível até 30 dias antes do evento, mediante envio dos dados da nova inscrita ao nosso e-mail. Cancelamentos seguem o Código de Defesa do Consumidor.</div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="final">
-  <div class="eb">— 07 / Convite</div>
-  <h2>O primeiro lote<br/>não volta.</h2>
-  <p>Você foi convidada uma vez.<br/>Quando o lote fechar, ele fecha.</p>
-  <a href="#checkout" class="btn btn-ghost-dark btn-large">Garantir minha vaga — R$&nbsp;150<span class="arrow">→</span></a>
-  <div class="meta">
-    <span>07.11.2026</span>
-    <span class="sep">+</span>
-    <span>São Paulo</span>
-    <span class="sep">+</span>
-    <span>Teatro Tokio Marine Hall</span>
-  </div>
-</section>
-
-<!-- RODAPÉ -->
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div class="mark">Madalenas</div>
-      <div class="tag">Restauradas, enraizadas e inabaláveis.</div>
-    </div>
-    <div class="col">
-      <h4>Encontro</h4>
-      <p>07 de novembro de 2026</p>
-      <p>Teatro Tokio Marine Hall</p>
-      <p>R. Bragança Paulista, 1281<br/>São Paulo · SP</p>
-    </div>
-    <div class="col">
-      <h4>Onde encontrar</h4>
-      <a href="https://www.instagram.com/somos.madalenas/" target="_blank" rel="noopener">@somos.madalenas</a>
-      <a href="#inscricao">Inscreva-se</a>
-    </div>
-  </div>
-  <div class="footer-inner">
-    <div class="legal" style="grid-column: 1 / -1; margin-top: 0; border-top: 1px solid rgba(235,233,227,.15); padding-top: 24px;">
-      <span>© 2026 Conferência Madalenas. Todos os direitos reservados.</span>
-      <span>3ª edição</span>
-    </div>
-  </div>
-</footer>
-
-<!-- STICKY CTA MOBILE -->
-<div class="sticky-cta" id="sticky-cta">
-  <div class="row">
-    <div class="price-block">
-      <span class="price-eb">Primeiro lote</span>
-      <span class="price-val">R$ 150<span class="lot-label">aberto</span></span>
-    </div>
-    <a href="#inscricao" class="btn-mini">Garantir ingresso <span aria-hidden="true">→</span></a>
-  </div>
-</div>
-
-<script>
-  /* Preenche marquees */
-  (function () {
-    function fill(id, text, sep) {
-      const el = document.getElementById(id);
-      if (!el) return;
-      let html = "";
-      for (let i = 0; i < 16; i++) {
-        html += `<span>${text}</span><span class="sep">${sep}</span>`;
-      }
-      el.innerHTML = html;
-    }
-    fill("marquee-light", "@somos.madalenas", "·");
-    fill("marquee-dark", "RESTAURADAS  ENRAIZADAS  INABALÁVEIS", "+");
-  })();
-
-  /* Acordeão FAQ */
-  document.querySelectorAll(".faq-item").forEach(item => {
-    item.addEventListener("click", () => {
-      const open = item.classList.toggle("open");
-      const glyph = item.querySelector(".faq-glyph");
-      if (glyph) glyph.textContent = open ? "−" : "+";
-    });
-  });
-
-  /* Scroll suave */
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener("click", e => {
-      const id = a.getAttribute("href");
-      if (id.length > 1) {
-        const t = document.querySelector(id);
-        if (t) {
-          e.preventDefault();
-          t.scrollIntoView({ behavior: "smooth" });
+  <script>
+    /* Preenche marquees */
+    (function () {
+      function fill(id, text, sep) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        let html = "";
+        for (let i = 0; i < 16; i++) {
+          html += `<span>${text}</span><span class="sep">${sep}</span>`;
         }
+        el.innerHTML = html;
       }
-    });
-  });
+      fill("marquee-light", "Chegou a hora de se tornar aquilo que Deus te sonhou para ser.", "·");
+      fill("marquee-dark", "RESTAURADAS  ENRAIZADAS  INABALÁVEIS", "+");
+    })();
 
-  /* Sticky mobile CTA — aparece após o hero, some perto da seção de inscrição */
-  (function () {
-    const sticky = document.getElementById("sticky-cta");
-    if (!sticky) return;
-    const hero = document.querySelector(".hero");
-    const lots = document.getElementById("inscricao");
-    function update() {
-      if (window.innerWidth > 720) {
-        sticky.classList.remove("show");
-        document.body.classList.remove("has-sticky-cta");
-        return;
+    /* Acordeão FAQ */
+    document.querySelectorAll(".faq-item").forEach(item => {
+      item.addEventListener("click", () => {
+        const open = item.classList.toggle("open");
+        const glyph = item.querySelector(".faq-glyph");
+        if (glyph) glyph.textContent = open ? "−" : "+";
+      });
+    });
+
+    /* Scroll suave */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener("click", e => {
+        const id = a.getAttribute("href");
+        if (id.length > 1) {
+          const t = document.querySelector(id);
+          if (t) {
+            e.preventDefault();
+            t.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      });
+    });
+
+    /* Sticky mobile CTA — aparece após o hero, some perto da seção de inscrição */
+    (function () {
+      const sticky = document.getElementById("sticky-cta");
+      if (!sticky) return;
+      const hero = document.querySelector(".hero");
+      const lots = document.getElementById("inscricao");
+      function update() {
+        if (window.innerWidth > 720) {
+          sticky.classList.remove("show");
+          document.body.classList.remove("has-sticky-cta");
+          return;
+        }
+        const heroBottom = hero ? hero.getBoundingClientRect().bottom : 0;
+        const lotsTop = lots ? lots.getBoundingClientRect().top : Infinity;
+        const lotsBottom = lots ? lots.getBoundingClientRect().bottom : Infinity;
+        const inLots = lotsTop < window.innerHeight * 0.6 && lotsBottom > 0;
+        const past = heroBottom < window.innerHeight * 0.4;
+        const show = past && !inLots;
+        sticky.classList.toggle("show", show);
+        document.body.classList.toggle("has-sticky-cta", show);
       }
-      const heroBottom = hero ? hero.getBoundingClientRect().bottom : 0;
-      const lotsTop = lots ? lots.getBoundingClientRect().top : Infinity;
-      const lotsBottom = lots ? lots.getBoundingClientRect().bottom : Infinity;
-      const inLots = lotsTop < window.innerHeight * 0.6 && lotsBottom > 0;
-      const past = heroBottom < window.innerHeight * 0.4;
-      const show = past && !inLots;
-      sticky.classList.toggle("show", show);
-      document.body.classList.toggle("has-sticky-cta", show);
-    }
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
-    update();
-  })();
-</script>
+      window.addEventListener("scroll", update, { passive: true });
+      window.addEventListener("resize", update);
+      update();
+    })();
+  </script>
 </body>
+
 </html>
