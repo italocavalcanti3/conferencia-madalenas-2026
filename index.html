@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Conferência Madalenas 2026</title>
   <meta name="description"
-    content="3ª edição da Conferência Madalenas — Restauradas, enraizadas e inabaláveis. 07 de novembro de 2026 · Teatro Tokio Marine Hall · São Paulo" />
+    content="3ª edição da Conferência Madalenas — Restauradas, enraizadas e inabaláveis. 07 de novembro de 2026 · Tokio Marine Hall · São Paulo" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" />
@@ -726,54 +726,20 @@
 
     .video-mockup {
       width: 100%;
-      max-width: 260px;
+      max-width: 300px;
       aspect-ratio: 9/16;
-      background: rgba(0, 0, 0, .35);
-      border: 1px solid rgba(235, 223, 172, .28);
       border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      position: relative;
       overflow: hidden;
+      position: relative;
+      background: #000;
     }
 
-    .video-mockup::before {
-      content: "";
+    .video-mockup iframe {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at 50% 30%, rgba(235, 223, 172, .08), transparent 65%);
-    }
-
-    .video-play {
-      width: 60px;
-      height: 60px;
-      border: 1.5px solid rgba(235, 223, 172, .55);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .video-play::after {
-      content: "▶";
-      color: var(--champagne);
-      font-size: 18px;
-      margin-left: 4px;
-      opacity: .8;
-    }
-
-    .video-label {
-      font-family: var(--font-body);
-      font-size: 10px;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: rgba(235, 223, 172, .5);
-      text-align: center;
-      padding: 0 20px;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     /* ---------- LARISSA ---------- */
@@ -1644,8 +1610,8 @@
       <div class="conf">Conferência</div>
       <div class="word">Madalenas</div>
       <div class="edition">
-        <span>07 de novembro</span><span class="sep">+</span><span>São Paulo</span><span
-          class="sep">+</span><span>Teatro Tokio Marine Hall</span>
+        <span>07 de novembro</span><span class="sep">+</span><span>São Paulo</span><span class="sep">+</span><span>Tokio
+          Marine Hall</span>
       </div>
     </div>
 
@@ -1658,7 +1624,8 @@
 
     <div class="hero-foot">
       <div class="cta-block">
-        <a href="#inscricao" class="btn btn-champagne btn-large">Garantir minha vaga<span class="arrow">→</span></a>
+        <a href="#inscricao" class="btn btn-champagne btn-large">Garantir meu ingresso<span class="arrow">→</span></a>
+        <h2>Vagas limitadas.</h2>
       </div>
     </div>
   </section>
@@ -1678,14 +1645,18 @@
           enraizadas<br />
           <em>e inabaláveis.</em>
         </h2>
+        <p>Um encontro para mulheres que desejam viver uma experiência profunda com Deus. Um dia inteiro de pregações,
+          adoração, louvor e partilhas.</p>
         <p>Uma obra precisa ser realizada na sua vida: <strong>RESTAURAÇÃO!</strong></p>
         <p>Deus quer restaurar tudo aquilo que foi perdido, te tornar uma mulher forte e inabalável, capaz de ser,
           aquilo que Ele te chamou para ser.</p>
       </div>
       <div class="invited-video">
         <div class="video-mockup">
-          <div class="video-play"></div>
-          <div class="video-label">Teaser em breve</div>
+          <iframe
+            src="https://player.vimeo.com/video/1190331557?badge=0&autopause=0&player_id=0&app_id=58479&title=0&byline=0&portrait=0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" title="Conferência Madalenas 2026"></iframe>
         </div>
       </div>
     </div>
@@ -1704,7 +1675,8 @@
         <dl class="larissa-bio">
           <dt>Vocação</dt>
           <dd>Líder do Ministério de mulheres Madalenas, <a href="https://www.instagram.com/somos.madalenas/"
-              target="_blank" rel="noopener">@somos.madalenas</a></dd>
+              target="_blank" rel="noopener">@somos.madalenas</a><br /></dd>
+          <dd>Pregadora e Missionária católica há mais de 20 anos.</dd>
 
           <dt>Família</dt>
           <dd>Esposa de Flavio Vitor Jr.</dd>
@@ -1769,11 +1741,11 @@
       </div>
       <div>
         <div class="col-head">— 05 / Onde</div>
-        <div class="big">Teatro Tokio<br />Marine <em>Hall</em></div>
+        <div class="big">Tokio<br />Marine <em>Hall</em></div>
         <div class="sub">
           R. Bragança Paulista, 1281<br />
           Várzea de Baixo · São Paulo · SP<br />
-          <a href="https://maps.google.com/?q=Teatro+Tokio+Marine+Hall+São+Paulo" target="_blank" rel="noopener">Ver no
+          <a href="https://maps.google.com/?q=Tokio+Marine+Hall+São+Paulo" target="_blank" rel="noopener">Ver no
             mapa →</a>
         </div>
       </div>
@@ -1812,10 +1784,20 @@
 
       <div class="faq-item">
         <div class="faq-q">
+          <div class="faq-q-text">Comprei meu ingresso na Conf 2025, e agora?</div>
+          <div class="faq-glyph">+</div>
+        </div>
+        <div class="faq-a">Se você adquiriu seu ingresso no Lote Zero, em 2025, ele continua válido normalmente para a
+          nova data da Conferência Madalenas. <br /><br />Devido à alteração do evento do dia 21 de novembro para o dia
+          7 de novembro, as participantes que não puderem comparecer na nova data poderão solicitar o ressarcimento do
+          ingresso entrando em contato com nossa organização através do: [INSERIR E-MAIL OU TELEFONE]</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
           <div class="faq-q-text">Onde acontece a Conferência?</div>
           <div class="faq-glyph">+</div>
         </div>
-        <div class="faq-a">No Teatro Tokio Marine Hall, em São Paulo. Endereço: R. Bragança Paulista, 1281, Várzea de
+        <div class="faq-a">No Tokio Marine Hall, em São Paulo. Endereço: R. Bragança Paulista, 1281, Várzea de
           Baixo. O teatro tem estacionamento próprio e fica próximo à estação João Dias da CPTM.</div>
       </div>
       <div class="faq-item">
@@ -1842,6 +1824,24 @@
         <div class="faq-a">Após clicar em inscrever-se, você é direcionada para a plataforma de pagamento. Aceitamos
           pix, cartão de débito e cartão de crédito em até 12x. A confirmação chega por e-mail em alguns minutos.</div>
       </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-text">Como será a alimentação?</div>
+          <div class="faq-glyph">+</div>
+        </div>
+        <div class="faq-a">Informamos que a Conferência Madalenas não contará com alimentação inclusa no
+          evento. Durante o dia, cada participante poderá pedir sua refeição pelos aplicativos de entrega, com
+          entrega diretamente no local do evento ou se dirigindo ao Shopping Market Place ou Morumbi Shopping.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <div class="faq-q-text">Onde estacionar?</div>
+          <div class="faq-glyph">+</div>
+        </div>
+        <div class="faq-a">O Tokio Marine Hall conta com serviço próprio de estacionamento e valet para maior comodidade
+          das participantes que forem de carro. O serviço é pago à parte e oferecido diretamente pelo local do evento,
+          não sendo de responsabilidade da organização da Conferência Madalenas.</div>
+      </div>
     </div>
   </section>
 
@@ -1850,13 +1850,13 @@
     <div class="eb">— 08 / Convite</div>
     <h2>Você foi<br /><em>convidada.</em></h2>
     <p>As vagas são limitadas.<br />Garanta a sua enquanto há tempo.</p>
-    <a href="#checkout" class="btn btn-ghost-dark btn-large">Garantir minha vaga<span class="arrow">→</span></a>
+    <a href="#checkout" class="btn btn-ghost-dark btn-large">Garantir meu ingresso<span class="arrow">→</span></a>
     <div class="meta">
       <span>07.11.2026</span>
       <span class="sep">+</span>
       <span>São Paulo</span>
       <span class="sep">+</span>
-      <span>Teatro Tokio Marine Hall</span>
+      <span>Tokio Marine Hall</span>
     </div>
   </section>
 
@@ -1870,9 +1870,12 @@
       <div class="col">
         <h4>Encontro</h4>
         <p>07 de novembro de 2026</p>
-        <p>Teatro Tokio Marine Hall</p>
+        <p>Tokio Marine Hall</p>
         <p>R. Bragança Paulista, 1281<br />São Paulo · SP</p>
-        <a href="https://maps.google.com/?q=Teatro+Tokio+Marine+Hall+São+Paulo" target="_blank" rel="noopener" style="color: var(--champagne); border-bottom: 1px solid var(--champagne); display: inline; width: fit-content;">Ver no mapa →</a>
+        <a href="https://maps.google.com/?q=Teatro+Tokio+Marine+Hall+São+Paulo" target="_blank" rel="noopener"
+          style="color: var(--champagne); border-bottom: 1px solid var(--champagne); display: inline; width: fit-content;">Ver
+          no mapa →</a>
+        <p></p>
       </div>
       <div class="col">
         <h4>Onde encontrar</h4>
@@ -1900,6 +1903,7 @@
     </div>
   </div>
 
+  <script src="https://player.vimeo.com/api/player.js"></script>
   <script>
     /* Preenche marquees */
     (function () {
@@ -1912,7 +1916,7 @@
         }
         el.innerHTML = html;
       }
-      fill("marquee-light", "Chegou a hora de se tornar aquilo que Deus te sonhou para ser.", "·");
+      fill("marquee-light", "PRIMEIRO LOTE DISPONÍVEL", "·");
       fill("marquee-dark", "RESTAURADAS  ENRAIZADAS  INABALÁVEIS", "+");
     })();
 
