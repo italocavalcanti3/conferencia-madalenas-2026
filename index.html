@@ -11,6 +11,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" href="fonts/Arenta.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="preload" href="assets/pilares.webp" as="image" fetchpriority="high" />
+  <link rel="preload" href="assets/speaker-flavio.webp" as="image" />
+  <link rel="preload" href="assets/speaker-marilia.webp" as="image" />
+  <link rel="preload" href="assets/speaker-bruna.webp" as="image" />
+  <link rel="preload" href="assets/speaker-nandah.webp" as="image" />
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" /></noscript>
   <style>
@@ -956,20 +960,23 @@
     .speaker-photo {
       aspect-ratio: 3/4;
       background: rgba(36, 20, 6, .06);
-      border: 1px dashed rgba(36, 20, 6, .22);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border: 1px solid rgba(36, 20, 6, .1);
       position: relative;
+      overflow: hidden;
     }
 
-    .speaker-photo::before {
-      content: "Foto";
-      font-family: var(--font-body);
-      font-size: 10px;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--fg-muted);
+    .speaker-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: sepia(.12) saturate(.92) contrast(1.04);
+      transition: transform 480ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .speaker-card:hover .speaker-photo img {
+      transform: scale(1.04);
     }
 
     .speaker-name {
@@ -1662,7 +1669,7 @@
 
     <div class="hero-foot">
       <div class="cta-block">
-        <a href="#inscricao" class="btn btn-champagne btn-large">Garantir meu ingresso<span class="arrow">→</span></a>
+        <a href="https://pay.kiwify.com.br/fNXjVgv" target="_blank" rel="noopener" class="btn btn-champagne btn-large">Garantir meu ingresso<span class="arrow">→</span></a>
         <h2>Vagas limitadas.</h2>
       </div>
     </div>
@@ -1742,19 +1749,27 @@
       <h2>Convidados.</h2>
       <div class="speakers-grid">
         <div class="speaker-card">
-          <div class="speaker-photo" role="img" aria-label="Foto de Flavio Vitor Jr."></div>
+          <div class="speaker-photo">
+            <img src="assets/speaker-flavio.webp" alt="Flavio Vitor Jr." width="600" height="800" loading="lazy" />
+          </div>
           <div class="speaker-name">Flavio Vitor Jr.</div>
         </div>
         <div class="speaker-card">
-          <div class="speaker-photo" role="img" aria-label="Foto de Marília Mello"></div>
+          <div class="speaker-photo">
+            <img src="assets/speaker-marilia.webp" alt="Marília Mello" width="600" height="800" loading="lazy" />
+          </div>
           <div class="speaker-name">Marília Mello</div>
         </div>
         <div class="speaker-card">
-          <div class="speaker-photo" role="img" aria-label="Foto de Bruna Marques"></div>
+          <div class="speaker-photo">
+            <img src="assets/speaker-bruna.webp" alt="Bruna Marques" width="600" height="800" loading="lazy" />
+          </div>
           <div class="speaker-name">Bruna Marques</div>
         </div>
         <div class="speaker-card">
-          <div class="speaker-photo" role="img" aria-label="Foto de Nandah"></div>
+          <div class="speaker-photo">
+            <img src="assets/speaker-nandah.webp" alt="Nandah" width="600" height="800" loading="lazy" />
+          </div>
           <div class="speaker-name">Nandah</div>
         </div>
       </div>
@@ -1801,7 +1816,7 @@
       </div>
 
       <div class="lots-cta">
-        <a href="#checkout" class="btn btn-onlight btn-large" id="primary-cta">Inscrever-me<span
+        <a href="https://pay.kiwify.com.br/fNXjVgv" target="_blank" rel="noopener" class="btn btn-onlight btn-large" id="primary-cta">Inscrever-me<span
             class="arrow">→</span></a>
         <span class="secure">Pagamento processado em ambiente seguro<br>pix, débito ou crédito em até 12x</span>
       </div>
@@ -1905,7 +1920,7 @@
     <div class="eb">— 08 / Convite</div>
     <h2>Você foi<br /><em>convidada.</em></h2>
     <p>As vagas são limitadas.<br />Garanta a sua enquanto há tempo.</p>
-    <a href="#checkout" class="btn btn-ghost-dark btn-large">Garantir meu ingresso<span class="arrow">→</span></a>
+    <a href="https://pay.kiwify.com.br/fNXjVgv" target="_blank" rel="noopener" class="btn btn-ghost-dark btn-large">Garantir meu ingresso<span class="arrow">→</span></a>
     <div class="meta">
       <span>07.11.2026</span>
       <span class="sep">+</span>
@@ -1954,7 +1969,7 @@
         <span class="price-eb">Inscrições abertas</span>
         <span class="price-val">Vagas limitadas</span>
       </div>
-      <a href="#inscricao" class="btn-mini">Garantir ingresso <span aria-hidden="true">→</span></a>
+      <a href="https://pay.kiwify.com.br/fNXjVgv" target="_blank" rel="noopener" class="btn-mini">Garantir ingresso <span aria-hidden="true">→</span></a>
     </div>
   </div>
 
